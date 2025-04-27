@@ -38,6 +38,7 @@
             <input type="text" class="search-input" placeholder="Search questions..." id="search-input">
           </div>
           <div class="user-name" id="user-name-display">Guest</div>
+                  <button id="logout">Log Out</button>
         </div>
       </div>
     </header>
@@ -73,10 +74,10 @@
         </div>
       </div>
     </footer>
-  `,q();const t=w();t&&(c(),l(t),u(t)),E()}function q(){const e=document.getElementById("user-input-form"),t=document.getElementById("user-input");!e||!t||e.addEventListener("submit",n=>{n.preventDefault();const o=t.value.trim();o&&(g(o),c(),l(o),u(o))})}function c(){const e=document.getElementById("user-input-container");e&&(e.style.display="none")}function l(e){const t=document.getElementById("questions-container"),n=document.getElementById("questions-content");!t||!n||(t.style.display="block",n.innerHTML='<div class="loading"><div class="loading-spinner"></div></div>',p(e).then(o=>{h(n,o),d(o.length)}).catch(o=>{n.innerHTML=`
+  `,q();const t=w();t&&(c(),u(t),l(t)),E()}function q(){const e=document.getElementById("user-input-form"),t=document.getElementById("user-input");!e||!t||e.addEventListener("submit",n=>{n.preventDefault();const o=t.value.trim();o&&(g(o),c(),u(o),l(o))})}function c(){const e=document.getElementById("user-input-container");e&&(e.style.display="none")}function u(e){const t=document.getElementById("questions-container"),n=document.getElementById("questions-content");!t||!n||(t.style.display="block",n.innerHTML='<div class="loading"><div class="loading-spinner"></div></div>',p(e).then(o=>{h(n,o),d(o.length)}).catch(o=>{n.innerHTML=`
         <div class="error">
           <p>Sorry, we couldn't load your questions. Please try again later.</p>
           <p>${o.message}</p>
         </div>
-      `}))}function u(e){const t=document.getElementById("user-name-display");t&&(t.textContent=e)}function d(e){const t=document.getElementById("questions-count");t&&(t.textContent=`${e} question${e!==1?"s":""}`)}function E(){const e=document.getElementById("search-input");e&&e.addEventListener("input",t=>{const n=t.target.value.toLowerCase(),o=document.querySelectorAll(".question-item");o.forEach(s=>{(s.querySelector(".question-text")?.textContent?.toLowerCase()||"").includes(n)?s.style.display="block":s.style.display="none"});const r=Array.from(o).filter(s=>s.style.display!=="none").length;d(r)})}document.addEventListener("DOMContentLoaded",()=>{C()});
-//# sourceMappingURL=index-C-eQtg4-.js.map
+      `}))}function l(e){const t=document.getElementById("user-name-display");t&&(t.textContent=e)}function d(e){const t=document.getElementById("questions-count");t&&(t.textContent=`${e} question${e!==1?"s":""}`)}function E(){const e=document.getElementById("search-input");e&&e.addEventListener("input",t=>{const n=t.target.value.toLowerCase(),o=document.querySelectorAll(".question-item");o.forEach(s=>{(s.querySelector(".question-text")?.textContent?.toLowerCase()||"").includes(n)?s.style.display="block":s.style.display="none"});const r=Array.from(o).filter(s=>s.style.display!=="none").length;d(r)})}document.addEventListener("DOMContentLoaded",()=>{C()});
+//# sourceMappingURL=index-DUm67aMl.js.map
